@@ -22,7 +22,7 @@ const Header = () => {
     <div>
       <div className="navbar bg-base-100 py-6 relative">
         <div className="flex-1">
-          <h2 className="text-4xl cursor-pointer font-bold  hover:text-warning italic text-[#59b0c8] font-mono">
+          <h2 className="text-4xl cursor-pointer font-bold  hover:text-warning italic text-[#00897B] font-mono">
             <Link to="/">BookBerry</Link>
           </h2>
         </div>
@@ -61,21 +61,28 @@ const Header = () => {
           <div className="flex md:flex-row space-x-0 md:space-x-4">
             <Link
               to="/home"
-              className="text-center text-base md:text-lg font-semibold text-[#59b0c8] hover:text-warning"
+              className="text-center text-base md:text-lg font-semibold text-[#00897B] hover:text-warning"
               onClick={() => setIsOpen(false)}
             >
               Home
             </Link>
             <Link
               to="/about"
-              className="text-center text-base md:text-lg font-semibold text-[#59b0c8] hover:text-warning"
+              className="text-center text-base md:text-lg font-semibold text-[#00897B] hover:text-warning"
               onClick={() => setIsOpen(false)}
             >
               About
             </Link>
             <Link
+              to="/services"
+              className="text-center text-base md:text-lg font-semibold text-[#00897B] hover:text-warning"
+              onClick={() => setIsOpen(false)}
+            >
+              Services
+            </Link>
+            <Link
               to="/feedback"
-              className="text-center text-base md:text-lg font-semibold text-[#59b0c8] hover:text-warning"
+              className="text-center text-base md:text-lg font-semibold text-[#00897B] hover:text-warning"
               onClick={() => setIsOpen(false)}
             >
               Feedback
@@ -85,7 +92,7 @@ const Header = () => {
               <>
                 <Link
                   to="/dashboard"
-                  className="text-center text-base md:text-lg font-semibold text-[#59b0c8] hover:text-warning"
+                  className="text-center text-base md:text-lg font-semibold text-[#00897B] hover:text-warning"
                   onClick={() => setIsOpen(false)}
                 >
                   Dashboard
@@ -109,14 +116,14 @@ const Header = () => {
               <>
                 <Link
                   to="/login"
-                  className="text-center text-base md:text-lg font-semibold text-[#59b0c8] hover:text-warning"
+                  className="text-center text-base md:text-lg font-semibold text-[#00897B] hover:text-warning"
                   onClick={() => setIsOpen(false)}
                 >
                   Login
                 </Link>
                 <Link
                   to="/signUp"
-                  className="text-center text-base md:text-lg font-semibold text-[#59b0c8] hover:text-warning"
+                  className="text-center text-base md:text-lg font-semibold text-[#00897B] hover:text-warning"
                   onClick={() => setIsOpen(false)}
                 >
                   SignUp
@@ -137,21 +144,28 @@ const Header = () => {
           <div className="flex flex-col md:flex-row space-x-0 md:space-x-4">
             <Link
               to="/home"
-              className="text-center text-base md:text-lg font-semibold text-[#59b0c8] hover:text-warning"
+              className="text-center text-base md:text-lg font-semibold text-[#00897B] hover:text-warning"
               onClick={() => setIsOpen(false)}
             >
               Home
             </Link>
             <Link
               to="/about"
-              className="text-center text-base md:text-lg font-semibold text-[#59b0c8] hover:text-warning"
+              className="text-center text-base md:text-lg font-semibold text-[#00897B] hover:text-warning"
               onClick={() => setIsOpen(false)}
             >
               About
             </Link>
             <Link
+              to="/services"
+              className="text-center text-base md:text-lg font-semibold text-[#00897B] hover:text-warning"
+              onClick={() => setIsOpen(false)}
+            >
+              Services
+            </Link>
+            <Link
               to="/feedback"
-              className="text-center text-base md:text-lg font-semibold text-[#59b0c8] hover:text-warning"
+              className="text-center text-base md:text-lg font-semibold text-[#00897B] hover:text-warning"
               onClick={() => setIsOpen(false)}
             >
               Feedback
@@ -161,7 +175,7 @@ const Header = () => {
               <>
                 <Link
                   to="/dashboard"
-                  className="text-center text-base md:text-lg font-semibold text-[#59b0c8] hover:text-warning"
+                  className="text-center text-base md:text-lg font-semibold text-[#00897B] hover:text-warning"
                   onClick={() => setIsOpen(false)}
                 >
                   Dashboard
@@ -185,14 +199,14 @@ const Header = () => {
               <>
                 <Link
                   to="/login"
-                  className="text-center text-base md:text-lg font-semibold text-[#59b0c8] hover:text-warning"
+                  className="text-center text-base md:text-lg font-semibold text-[#00897B] hover:text-warning"
                   onClick={() => setIsOpen(false)}
                 >
                   Login
                 </Link>
                 <Link
                   to="/signUp"
-                  className="text-center text-base md:text-lg font-semibold text-[#59b0c8] hover:text-warning"
+                  className="text-center text-base md:text-lg font-semibold text-[#00897B] hover:text-warning"
                   onClick={() => setIsOpen(false)}
                 >
                   Sign Up
