@@ -8,12 +8,11 @@ const About = () => {
         
         <div className="order-1 lg:order-2">
           <h2 className="text-lg lg:text-3xl 2xl:text-[36px] font-semibold text-[#00897B] text-center lg:text-start">About US</h2>
-          <p className=" mt-[15px] text-base lg:leading-[170%]">Welcome to Foodie, your ultimate destination for culinary inspiration and gourmet delights! At Foodie, we believe that food is more than just sustenance it is an experience, an art, and a way to connect with people from all around the world.</p>
+          <p className=" mt-[15px] text-base lg:leading-[170%]">Welcome to Book-Berry, your ultimate online destination for discovering and indulging in the world of books. At Book-Berry, we believe that books are more than just words on a page—they are gateways to new worlds, ideas, and experiences. Our mission is to foster a love for reading by providing a diverse and curated selection of books that cater to every readers taste.</p>
           <p className="text-base lg:leading-[170%] mt-[8px]">
-          Foodie was born out of a passion for food and a love for sharing it with others. Our team of food enthusiasts, chefs, and writers come from diverse backgrounds, but we all share a common goal: to make cooking enjoyable and accessible for everyone. From classic dishes to innovative creations, we curate a wide range of recipes that cater to all tastes and dietary preferences.
-          At Foodie, we are more than just a website we are a community of passionate food lovers. We invite you to join us on this delicious journey. Whether you are here to find your next favorite recipe, learn a new cooking technique, or simply enjoy beautiful food photography, we hope to inspire you to savor the flavors of life.
-  
-  Thank you for being a part of our story. Let us make every meal a celebration!
+          Book-Berry was born out of a passion for reading and a desire to create a community where book lovers can come together to explore and share their favorite reads. Founded by avid readers who understand the magic of a good book, we are dedicated to making reading accessible, enjoyable, and enriching for everyone.
+          At Book-Berry, we believe that books have the power to transform lives and communities. Join us in our journey to explore, discover, and share the magic of reading. Whether you’re looking for your next page-turner, a thought-provoking novel, or a comforting bedtime story, Book-Berry is here to help you find it. 
+          Happy reading!
           </p>
         </div>
       </div>

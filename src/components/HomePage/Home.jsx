@@ -2,6 +2,7 @@ import About from "../Pages/About";
 import Services from "../Pages/Services";
 import Banner from "./Banner";
 import Books from "./Books";
+import Gallery from "./Gallery";
 
 
 const Home = () => {
@@ -18,6 +19,9 @@ const Home = () => {
            </section>
            <section>
             <Services/>
+           </section>
+           <section>
+            <Gallery/>
            </section>
 
         </div>
