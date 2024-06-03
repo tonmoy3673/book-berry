@@ -1,19 +1,23 @@
+import { useLoaderData } from "react-router-dom";
 import About from "../Pages/About";
 import Feedback from "../Pages/Feedback";
 import Services from "../Pages/Services";
 import Banner from "./Banner";
-import Books from "./Books";
+
+import Books from "./BooksItems/Books";
 import Gallery from "./Gallery";
 
 
 const Home = () => {
+    const data=useLoaderData();
+    console.log(data);
     return (
         <div>
            <section>
             <Banner/>
            </section>
            <section>
-            <Books/>
+            <Books data={data}/>
            </section>
            <section>
             <About/>
