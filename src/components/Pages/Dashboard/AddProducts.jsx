@@ -10,12 +10,12 @@ const AddProducts = () => {
   const title=form.title.value;
   const price=form.price.value;
   const author=form.author.value;
-  const page=form.page.value;
+  const pages=form.pages.value;
   const subject=form.subject.value;
   const description=form.description.value;
   const language=form.language.value;
   const image_url=form.photo.value;
- const data={title,subject,description,image_url,price,author,page,language};
+ const data={title,subject,description,image_url,price,author,pages,language};
  console.log(data);
  Swal.fire({
   title: "Are you sure to add this item?",
@@ -39,7 +39,7 @@ const AddProducts = () => {
           
           Swal.fire("Saved!", "", "success");
           form.reset();
-          toast.success('New Food Added Successfully!!')
+          toast.success('New Book Added Successfully!!')
         })
         .catch((error) => {
           console.error('There was a problem with the fetch operation:', error);
@@ -105,15 +105,15 @@ const AddProducts = () => {
                     </div>
 
                     <div>
-                      <h5 className="mb-2 text-[#00897B] text-base">Total Page *</h5>
-                      <label className="sr-only" htmlFor="page">
-                      page
+                      <h5 className="mb-2 text-[#00897B] text-base">Total pages *</h5>
+                      <label className="sr-only" htmlFor="pages">
+                      pages
                       </label>
                       <input
                         className="w-full rounded-lg bg-[#C477B126]  shadow-sm shadow-black p-3 lg:pr-16 pr-3  text-sm"
                         placeholder="Input Page Count"
                         type="number"
-                        id="page"
+                        id="pages"
                         required/>
                     </div>
                   </div>

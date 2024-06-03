@@ -6,6 +6,7 @@ import DashboardLayout from "../Layout/DashboardLayout";
 import MainLayout from "../Layout/MainLayout";
 import About from "../Pages/About";
 import AddProducts from "../Pages/Dashboard/AddProducts";
+import AllProducts from "../Pages/Dashboard/AllProducts";
 import Dashboard from "../Pages/Dashboard/Dashboard";
 import Feedback from "../Pages/Feedback";
 import Login from "../Pages/Login";
@@ -68,6 +69,10 @@ export const router=createBrowserRouter([
             {
                 path:'/dashboard/add-products',
                 element:<PrivateRoute><AddProducts/></PrivateRoute>
+            },
+            {
+                path:'/dashboard/all-products',
+                element:<PrivateRoute><AllProducts/></PrivateRoute>
             }
         ]
     }
