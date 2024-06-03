@@ -55,10 +55,10 @@ const SignUp = () => {
     return (
         <div className='py-6 lg:py-10 mb-4 lg:mb-16 md:flex gap-20  items-center'>
             <div>
-                <img src='https://img.freepik.com/free-vector/tablet-login-concept-illustration_114360-7963.jpg?t=st=1717351978~exp=1717355578~hmac=af05ecc2d4cea4a079511a209593d99e105e453deba2677b02ebe150ffce1aa1&w=740' className='w-[300px] lg:w-[600px] mx-auto md:mx-0'>
+                <img src='/src/assets/images/signUp.jpg' className='w-[300px] lg:w-[600px] mx-auto md:mx-0'>
                 </img>
             </div>
-            <div className='w-96 p-10 bg-[#880769] rounded mx-auto md:mx-0'>
+            <div className='w-96 p-10 bg-[#00897B] rounded mx-auto md:mx-0'>
                 <h2 className='text-2xl font-bold text-center mb-4 text-white'>Please Sign Up Here!</h2>
                 <form onSubmit={handleSubmit(handleSignup)}>
                 <div className="form-control w-full max-w-xs text-black">
@@ -102,7 +102,7 @@ const SignUp = () => {
                     
                    
                    <div className='py-4'>
-                   <input type="submit" className='btn w-full hover:bg-warning bg-[#880769] text-white' value='Sign Up'/>
+                   <input type="submit" className='btn w-full hover:bg-warning bg-[#00897B] text-white' value='Sign Up'/>
                    </div>
                 </form>
                 <div>
