@@ -5,6 +5,7 @@ import Home from "../HomePage/Home";
 import DashboardLayout from "../Layout/DashboardLayout";
 import MainLayout from "../Layout/MainLayout";
 import About from "../Pages/About";
+import AddProducts from "../Pages/Dashboard/AddProducts";
 import Dashboard from "../Pages/Dashboard/Dashboard";
 import Feedback from "../Pages/Feedback";
 import Login from "../Pages/Login";
@@ -66,7 +67,7 @@ export const router=createBrowserRouter([
             },
             {
                 path:'/dashboard/add-products',
-                element:<PrivateRoute></PrivateRoute>
+                element:<PrivateRoute><AddProducts/></PrivateRoute>
             }
         ]
     }
