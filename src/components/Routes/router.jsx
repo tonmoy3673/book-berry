@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import ErrorPage from "../ErrorPage/ErrorPage";
+import BookDetails from "../HomePage/BooksItems/BookDetails";
 import Home from "../HomePage/Home";
 import MainLayout from "../Layout/MainLayout";
 import About from "../Pages/About";
@@ -31,6 +32,11 @@ export const router=createBrowserRouter([
             {
                 path:'/services',
                 element:<Services/>
+            },
+            {
+                path:'/books/:id',
+                element:<BookDetails/>,
+                loader:({params})=>fetch(`http://localhost:3000/books/${params.id}`)
             },
             {
                 path:'/feedback',

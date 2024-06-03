@@ -24,6 +24,7 @@ const breakpoints = {
 const Books = ({ data }) => {
   return (
     <div className="pt-6 md:pt-10">
+        <h2 className="text-lg lg:text-3xl 2xl:text-[36px] font-semibold text-[#00897B] text-center  mt-8 md:mt-16">Our Library </h2>
       <Swiper
         // spaceBetween={5}
         modules={[Autoplay, Navigation]}
@@ -41,12 +42,12 @@ const Books = ({ data }) => {
         {data?.map(({ image_url, _id }) => (
           <SwiperSlide
             key={_id}
-            className={`text-center   py-16`}
+            className={`text-center py-8 md:py-12 mb-2`}
           >
-            <div className="h-[240px] md:h-[264px] mx-auto">
+            <div className=" h-[240px] md:h-[264px] mx-auto !rounded-md">
                   
               
-                <img src={image_url} alt="books" className="!w-full  rounded-md !h-[240px] !md:h-[364px] object-contain" />
+                <img src={image_url} alt="books" className="!w-full  !rounded-md !h-[240px] !md:h-[364px] object-contain" />
                
               
               <div className="">
