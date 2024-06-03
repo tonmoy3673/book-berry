@@ -68,11 +68,11 @@ const Login = () => {
     return (
         <div className='py-6 lg:py-16 mb-5 md:flex gap-20  items-center '>
             <div>
-                <img src='https://img.freepik.com/free-vector/tablet-login-concept-illustration_114360-7963.jpg?t=st=1717351978~exp=1717355578~hmac=af05ecc2d4cea4a079511a209593d99e105e453deba2677b02ebe150ffce1aa1&w=740' className='w-[300px] lg:w-[600px] mx-auto md:mx-0'>
+                <img src='/src/assets/images/login.jpg' className='w-[300px] lg:w-[600px] mx-auto md:mx-0'>
                 </img>
             </div>
 
-            <div className='w-96 p-10 bg-[#a01b81] rounded text-white mx-auto md:mx-0'>
+            <div className='w-96 p-10 bg-[#00897B] rounded text-white mx-auto md:mx-0'>
                 <h2 className='text-2xl font-bold text-center mb-5'>Please Login Here!</h2>
                 <form onSubmit={handleSubmit(handleLogin)}>
 
@@ -104,15 +104,15 @@ const Login = () => {
                     </div>
                     
                    
-                    <input type="submit" className='btn w-full font-semibold hover:bg-warning bg-[#880769] text-white' value='Login' />
+                    <input type="submit" className='btn w-full font-semibold hover:bg-warning bg-[#00897B] text-white' value='Login with Email' />
                     <div>
                         {loginError && <p className='text-red-600'>{loginError}</p>}
                     </div>
                 </form>
                 <p className='py-2'>New to foodie? <Link to='/register' className='text-blue-500 underline'>Create an account</Link></p>
                 <div className="divider text-xl font-semibold">OR</div>
-                <button onClick={handleSignInWithGoogle} className='btn w-full hover:bg-warning bg-[#880769] text-white'><FaGoogle className='text-base'/> Login With Google</button>
-                <button  onClick={handleGitHub} className='btn w-full hover:bg-warning bg-[#880769] text-white mt-2 md:mt-4'><FaGithub className='text-lg'/> Login With GitHub</button>
+                <button onClick={handleSignInWithGoogle} className='btn w-full hover:bg-warning bg-[#00897B] text-white'><FaGoogle className='text-base'/> Login With Google</button>
+                <button  onClick={handleGitHub} className='btn w-full hover:bg-warning bg-[#00897B] text-white mt-2 md:mt-4'><FaGithub className='text-lg'/> Login With GitHub</button>
             </div>
 
         </div>

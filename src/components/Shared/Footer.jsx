@@ -12,7 +12,7 @@ const Footer = () => {
           <img
             src="/src/assets/images/logoF.png"
             height={140}
-            width={150}
+            width={140}
             className="rounded-full"
           />
         </div>

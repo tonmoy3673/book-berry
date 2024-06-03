@@ -71,9 +71,9 @@ const benefits = [
 
 const Services = () => {
   return (
-    <div className="bg-[#C477B126]">
+    <div className="">
       <div className="px-6">
-        <div className="order-1 col-span-3 shadow-sm py-12">
+        <div className="order-1 col-span-3 pt-10">
           <div className="mx-auto flex flex-col sm:text-left text-center">
             
             <h2 className="text-lg lg:text-3xl 2xl:text-[36px] font-semibold text-[#00897B] text-center ">
