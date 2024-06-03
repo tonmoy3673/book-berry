@@ -8,6 +8,7 @@ import About from "../Pages/About";
 import AddProducts from "../Pages/Dashboard/AddProducts";
 import AllProducts from "../Pages/Dashboard/AllProducts";
 import Dashboard from "../Pages/Dashboard/Dashboard";
+import UpdateProducts from "../Pages/Dashboard/UpdateProducts";
 import Feedback from "../Pages/Feedback";
 import Login from "../Pages/Login";
 import Services from "../Pages/Services";
@@ -69,6 +70,11 @@ export const router=createBrowserRouter([
             {
                 path:'/dashboard/add-products',
                 element:<PrivateRoute><AddProducts/></PrivateRoute>
+            },
+            {
+                path:'/dashboard/update/:id',
+                element:<PrivateRoute><UpdateProducts/></PrivateRoute>,
+                loader:({params})=>fetch(`http://localhost:3000/books/${params.id}`)
             },
             {
                 path:'/dashboard/all-products',

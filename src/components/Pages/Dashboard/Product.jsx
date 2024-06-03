@@ -52,7 +52,7 @@ const Product = ({product, setProducts,products} ) => {
                 <h2 className="text-base md:text-xl text-[#880769] font-semibold my-2">{title}</h2>
                 
                 <div className="card-actions justify-center mt-2">
-                  <Link to={`/foods/${_id}`}>
+                  <Link to={`/books/${_id}`}>
                   <button className="btn hover:bg-warning bg-[#880769] text-white">
                    Details 
                   </button>
@@ -60,7 +60,7 @@ const Product = ({product, setProducts,products} ) => {
                   <button onClick={()=> handleDelete(_id)} className="btn hover:bg-warning bg-red-600 text-white">
                    Delete 
                   </button>
-                  <Link to={`/dashboard/update-product/${_id}`}>
+                  <Link to={`/dashboard/update/${_id}`}>
                   <button className="btn hover:bg-warning bg-green-600 text-white">
                    Update 
                   </button>
