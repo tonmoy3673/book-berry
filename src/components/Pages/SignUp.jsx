@@ -1,5 +1,4 @@
 
-
 import { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
@@ -22,12 +21,13 @@ const SignUp = () => {
             
             
             const userInfo={
-                displayName:(data.name)
+                displayName:(data.name),
+                photoURL:data.photoURL
             }
             updateUser(userInfo)
             .then(()=>{
                 
-                saveUser(data.name,data.email);
+                saveUser(data.name,data.email,data.photoURL);
             })
             .catch(err=>{
                 console.log(err)
@@ -41,8 +41,8 @@ const SignUp = () => {
         });   
 
     }
-    const saveUser=(name,email)=>{
-        const user={name,email};
+    const saveUser=(name,email,photoURL)=>{
+        const user={name,email,photoURL};
         console.log(user);
         toast.success('Account Created Successfully!!')
             navigate(from,{replace:true});
@@ -97,6 +97,21 @@ const SignUp = () => {
                         })} placeholder="Type Password"
                         className="input input-bordered w-full max-w-xs" />
                         {errors.password && <p role='alert' className='text-red-600'>{errors.password?.message}</p>}
+                        
+                    </div>
+
+                    <div className="form-control w-full max-w-xs text-black">
+                        <label className="label">
+                            <span className="label-text text-xl font-semibold text-white">Photo URL</span>
+                            
+                        </label>
+                        <input type="text" 
+                        {...register("photoURL",{
+                            required:'photoURL is required',
+                            
+                        })} placeholder="Input Photo URL"
+                        className="input input-bordered w-full max-w-xs" />
+                        {errors.photoURL && <p role='alert' className='text-red-600'>{errors.photoURL?.message}</p>}
                         
                     </div>
                     

@@ -27,13 +27,16 @@ const Header = () => {
           </h2>
         </div>
         <div className="md:hidden">
-          <div className="w-10 rounded-full mr-8">
+          {
+            user?.photoURL?
+            <div className="w-10 rounded-full mr-8">
             <img
               className="rounded-full cursor-pointer"
               alt="User Avatar"
-              src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+              src={user.photoURL}
             />
-          </div>
+          </div>:<FaRegUser/>
+          }
           <button
             onClick={mobileMenu}
             className="text-white focus:outline-none"
@@ -99,18 +102,21 @@ const Header = () => {
                 </Link>
                 <button
                   onClick={handleLogout}
-                  className="hover:bg-warning py-2 px-4 rounded-xl font-semibold bg-[#880769] text-white"
+                  className="hover:bg-warning py-1 px-4 rounded-xl font-semibold bg-[#00897B] text-white"
                 >
                   Log Out
                 </button>
-                <div className="w-10 rounded-full ml-8 hidden md:block">
-                  {/* <img
+                {
+                  user?.photoURL?
+                  <div className="w-10 rounded-full ml-8 hidden md:block">
+                  <img
                     className="rounded-full cursor-pointer"
                     alt="User Avatar"
-                    src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-                  /> */}
-                  <FaRegUser className="text-xl md:text-2xl mt-1"/>
-                </div>
+                    src={user?.photoURL}
+                  />
+                  
+                </div>:<FaRegUser/>
+                }
               </>
             ) : (
               <>
