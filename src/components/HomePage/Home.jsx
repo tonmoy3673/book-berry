@@ -10,7 +10,6 @@ import Gallery from "./Gallery";
 
 const Home = () => {
     const data=useLoaderData();
-    console.log(data);
     return (
         <div>
            <section>

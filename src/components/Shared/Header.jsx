@@ -1,5 +1,5 @@
 
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { FaRegUser } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../Context/AuthProvider";
@@ -17,6 +17,8 @@ const Header = () => {
   const mobileMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  
 
   return (
     <div>

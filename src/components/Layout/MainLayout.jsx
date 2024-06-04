@@ -3,6 +3,8 @@ import Footer from "../Shared/Footer";
 import Header from "../Shared/Header";
 
 const MainLayout = () => {
+
+
     return (
         <div>
             <div className="px-[5%]">

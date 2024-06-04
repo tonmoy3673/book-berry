@@ -1,9 +1,12 @@
 import { useContext } from "react";
+import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../Context/AuthProvider";
 
 
 const Dashboard = () => {
     const{user}=useContext(AuthContext);
+    const userData=useLoaderData();
+    console.log(userData);
     
     return (
         <div className="py-6 md:py-16">

@@ -6,7 +6,7 @@ const DashboardLayout = () => {
     <div className="grid grid-cols-12">
       <div className="col-span-2 bg-base-300 min-h-screen p-3 lg:p-12 pt-12 lg:pt-28">
         <ul>
-        <Link to="/dashboard"><button className="bg-[#00897B] hover:bg-warning rounded-md mb-6 p-4 text-white w-full">
+        <Link to="/dashboard/user"><button className="bg-[#00897B] hover:bg-warning rounded-md mb-6 p-4 text-white w-full">
         User Info
             </button></Link>
           
@@ -17,7 +17,7 @@ const DashboardLayout = () => {
             Add Product
            </button></Link>
            <Link to="/" ><button className="bg-[#00897B] hover:bg-warning rounded-md p-4 text-white w-full">
-           Home
+           HomePage
            </button></Link>
           
         </ul>

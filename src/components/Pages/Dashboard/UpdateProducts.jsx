@@ -8,7 +8,6 @@ import Swal from 'sweetalert2';
 
 const UpdateProducts = () => {
     const book=useLoaderData();
-
     const [title,setTitle]=useState(book.title);
     const [language,setLanguage]=useState(book.language);
     const [author,setAuthor]=useState(book.author);

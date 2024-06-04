@@ -3,6 +3,7 @@ import { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 import { Link, useNavigate } from 'react-router-dom';
+import { setAuthTokenForSingUp } from '../../api/auth';
 import { AuthContext } from '../Context/AuthProvider';
 
 const SignUp = () => {
@@ -16,6 +17,7 @@ const SignUp = () => {
         setSignUpError('');
         createUser(data.email, data.password)
         .then(result =>{
+            
             const user=result.user;
             console.log(user);
             
@@ -41,9 +43,11 @@ const SignUp = () => {
         });   
 
     }
+
     const saveUser=(name,email,photoURL)=>{
         const user={name,email,photoURL};
-        console.log(user);
+        setAuthTokenForSingUp(user)
+            .then(res => res.json())
         toast.success('Account Created Successfully!!')
             navigate(from,{replace:true});
 

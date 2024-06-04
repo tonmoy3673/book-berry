@@ -49,11 +49,11 @@ const Product = ({product, setProducts,products} ) => {
                 />
               </div>
               <div className="text-center">
-                <h2 className="text-base md:text-xl text-[#880769] font-semibold my-2">{title}</h2>
+                <h2 className="text-base md:text-xl text-[#00897B] font-semibold my-2">{title}</h2>
                 
                 <div className="card-actions justify-center mt-2">
                   <Link to={`/books/${_id}`}>
-                  <button className="btn hover:bg-warning bg-[#880769] text-white">
+                  <button className="btn hover:bg-warning bg-[#00897B] text-white">
                    Details 
                   </button>
                   </Link>

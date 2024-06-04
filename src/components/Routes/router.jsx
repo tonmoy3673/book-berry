@@ -64,8 +64,9 @@ export const router=createBrowserRouter([
         errorElement:<ErrorPage/>,
         children:[
             {
-                path:'',
-                element:<PrivateRoute><Dashboard/></PrivateRoute>
+                path:'/dashboard/user',
+                element:<PrivateRoute><Dashboard/></PrivateRoute>,
+                loader:()=>fetch('http://localhost:3000/user')
             },
             {
                 path:'/dashboard/add-products',

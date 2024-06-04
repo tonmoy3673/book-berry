@@ -1,17 +1,20 @@
 
-import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
-import { useContext, useState } from 'react';
+import { GithubAuthProvider, GoogleAuthProvider, getAuth, sendPasswordResetEmail } from 'firebase/auth';
+import { useContext, useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 import { FaGithub, FaGoogle } from 'react-icons/fa6';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { app } from '../../../firebase.config';
 import { AuthContext } from '../Context/AuthProvider';
+import { setAuthToken } from '../../api/auth';
 
 
 const Login = () => {
     const { register, handleSubmit,formState: { errors } } = useForm();
     const {signIn,logInWithGoogle,signInWithGithub}=useContext(AuthContext);
     const [loginError,setLoginError]=useState('');
+    const emailRef=useRef(null);
     const location =useLocation();
     const navigate = useNavigate ();
 
@@ -22,6 +25,7 @@ const Login = () => {
             setLoginError('');
         signIn(data.email, data.password)
         .then(result=>{
+            setAuthToken(data.email)
             const user=result.user;
             console.log(user);
 
@@ -38,6 +42,8 @@ const Login = () => {
         });
 
     }
+
+  
         const googleProvider=new GoogleAuthProvider();
         const handleSignInWithGoogle=()=>{
             logInWithGoogle(googleProvider)
@@ -62,8 +68,33 @@ const Login = () => {
             })
             .catch(error=>{
                 console.log(error);
+            })   
+        }
+
+        
+        const handleResetPassword =()=>{
+        
+        const email = emailRef.current?.value;
+        console.log('Email ref:', emailRef.current); // Log the ref to see if it is assigned correctly
+        console.log('Email value:', email); 
+            if(!email){
+                alert('Please enter an email');
+                return;
+            }
+             else if(!/^[a-zA-Z0-9. _-]+@[a-zA-Z0-9. -]+\. [a-zA-Z]{2,4}$/.test(email)){
+                alert('Please write a valid email');
+                return;
+            }
+          const auth=getAuth(app);
+            sendPasswordResetEmail(auth,email)
+            .then(()=>{
+                alert('Please check your email')
+            })
+            .catch(error=>{
+                console.log(error);
             })
         }
+    
 
     return (
         <div className='py-6 lg:py-16 mb-5 md:flex gap-20  items-center '>
@@ -82,23 +113,23 @@ const Login = () => {
                             <span className="label-text text-xl font-semibold text-white">Email</span>
                             
                         </label>
-                        <input type="email" {...register("email",{required:"Email Address is required"})} className="input input-bordered w-full max-w-xs"/>
+                        <input type="email" ref={emailRef} {...register("email",{required:"Email Address is required"})} className="input input-bordered w-full max-w-xs"/>
                         {errors.email && <p role="alert" className='text-red-400'>{errors.email?.message}</p>}
                     </div>
 
                     <div className="form-control w-full max-w-xs text-black ">
                         <label className="label">
-                            <span className="label-text text-xl font-semibold text-white">Password</span>
+                            <span className="label-text text-xl font-semibold text-white ">Password</span>
                             
                         </label>
                         <input type="password" {...register("password",{required:"Password is required",
                         minLength:{value:2,message:'Password must be 6 character or longer'}
                         
                         })} className="input input-bordered w-full max-w-xs"/>
-                        
-                        <label className="label">
                         {errors.password && <p role="alert" className='text-red-400'>{errors.password?.message}</p>}
-                            <span className="label-text text-white">Forget Password?</span>
+                        <label className="label">
+                        
+                            <a onClick={handleResetPassword} className="label-text text-white text-sm md:text-lg underline">Forget Password?</a>
                             
                         </label>
                     </div>
@@ -109,7 +140,7 @@ const Login = () => {
                         {loginError && <p className='text-red-600'>{loginError}</p>}
                     </div>
                 </form>
-                <p className='py-2'>New to foodie? <Link to='/signUp' className='text-blue-500 underline'>Create an account</Link></p>
+                <p className='py-2'>New to book-berry? <Link to='/signUp' className='text-blue-500 underline'>Create an account</Link></p>
                 <div className="divider text-xl font-semibold">OR</div>
                 <button onClick={handleSignInWithGoogle} className='btn w-full hover:bg-warning bg-[#00897B] text-white'><FaGoogle className='text-base'/> Login With Google</button>
                 <button  onClick={handleGitHub} className='btn w-full hover:bg-warning bg-[#00897B] text-white mt-2 md:mt-4'><FaGithub className='text-lg'/> Login With GitHub</button>
