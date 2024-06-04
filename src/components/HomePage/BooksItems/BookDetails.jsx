@@ -6,7 +6,7 @@ const BookDetails = () => {
   const { title, subject, author, description, image_url,pages,price,language} = book;
 
 
-  console.log(book);
+  
   return (
     <div className="md:flex py-4 mt-3 md:mt-10 gap-10 justify-around md:px-[20%]">
       

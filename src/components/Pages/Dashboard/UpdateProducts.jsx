@@ -31,7 +31,7 @@ const UpdateProducts = () => {
   const description=form.description.value;
   const image_url=form.photo.value;
  const data={title,subject,description,image_url,price,pages,language,author};
- console.log(data);
+ 
  Swal.fire({
     title: "Do you want to save the changes?",
     showDenyButton: true,

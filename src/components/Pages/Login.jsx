@@ -1,20 +1,19 @@
 
 import { GithubAuthProvider, GoogleAuthProvider, getAuth, sendPasswordResetEmail } from 'firebase/auth';
-import { useContext, useRef, useState } from 'react';
+import { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 import { FaGithub, FaGoogle } from 'react-icons/fa6';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { app } from '../../../firebase.config';
-import { AuthContext } from '../Context/AuthProvider';
 import { setAuthToken } from '../../api/auth';
+import { AuthContext } from '../Context/AuthProvider';
 
 
 const Login = () => {
-    const { register, handleSubmit,formState: { errors } } = useForm();
+    const { register, handleSubmit,formState: { errors },getValues } = useForm();
     const {signIn,logInWithGoogle,signInWithGithub}=useContext(AuthContext);
     const [loginError,setLoginError]=useState('');
-    const emailRef=useRef(null);
     const location =useLocation();
     const navigate = useNavigate ();
 
@@ -72,29 +71,29 @@ const Login = () => {
         }
 
         
-        const handleResetPassword =()=>{
-        
-        const email = emailRef.current?.value;
-        console.log('Email ref:', emailRef.current); // Log the ref to see if it is assigned correctly
-        console.log('Email value:', email); 
-            if(!email){
+       
+        const handleResetPassword = () => {
+            const email = getValues("email");
+            console.log('Email value:', email);
+    
+            if (!email) {
                 alert('Please enter an email');
                 return;
-            }
-             else if(!/^[a-zA-Z0-9. _-]+@[a-zA-Z0-9. -]+\. [a-zA-Z]{2,4}$/.test(email)){
+            } else if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email)) {
                 alert('Please write a valid email');
                 return;
             }
-          const auth=getAuth(app);
-            sendPasswordResetEmail(auth,email)
-            .then(()=>{
-                alert('Please check your email')
-            })
-            .catch(error=>{
-                console.log(error);
-            })
-        }
     
+            const auth = getAuth(app);
+            sendPasswordResetEmail(auth, email)
+                .then(() => {
+                    alert('Please check your email')
+                    toast.success('Email has been sent!!')
+                })
+                .catch(error => {
+                    console.log(error);
+                })
+        }
 
     return (
         <div className='py-6 lg:py-16 mb-5 md:flex gap-20  items-center '>
@@ -113,7 +112,7 @@ const Login = () => {
                             <span className="label-text text-xl font-semibold text-white">Email</span>
                             
                         </label>
-                        <input type="email" ref={emailRef} {...register("email",{required:"Email Address is required"})} className="input input-bordered w-full max-w-xs"/>
+                        <input type="email" {...register("email",{required:"Email Address is required"})} className="input input-bordered w-full max-w-xs"/>
                         {errors.email && <p role="alert" className='text-red-400'>{errors.email?.message}</p>}
                     </div>
 
