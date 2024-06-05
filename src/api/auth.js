@@ -5,7 +5,7 @@
 //     }
 
 //     console.log(user);
-//     fetch(`http://localhost:3000/user/login`, {
+//     fetch(`https://book-berry-server.vercel.app/user/login`, {
 //         method: "POST",
 //         headers: {
 //             'content-type' : ['application/json']
@@ -24,7 +24,7 @@
 // export const setAuthTokenForSingUp = (user,toast,navigate,from) =>{
    
 //     console.log(user);
-//     fetch(`http://localhost:3000/user/register`, {
+//     fetch(`https://book-berry-server.vercel.app/user/register`, {
 //         method: "POST",
 //         headers: {
 //             'content-type' : ['application/json']
@@ -46,7 +46,7 @@ export const setAuthToken = (user) =>{
     }
 
     console.log(user);
-    fetch(`http://localhost:3000/user/${user.email}`, {
+    fetch(`https://book-berry-server.vercel.app/user/${user.email}`, {
         method: "PUT",
         headers: {
             'content-type' : ['application/json']
@@ -64,7 +64,7 @@ export const setAuthToken = (user) =>{
 export const setAuthTokenForSingUp = (user,toast,navigate,from) =>{
    
     console.log(user);
-    fetch(`http://localhost:3000/user/${user.email}`, {
+    fetch(`https://book-berry-server.vercel.app/user/${user.email}`, {
         method: "PUT",
         headers: {
             'content-type' : ['application/json']

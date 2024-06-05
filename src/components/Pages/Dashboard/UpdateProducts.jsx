@@ -39,7 +39,7 @@ const UpdateProducts = () => {
     denyButtonText: `Don't save`
   }).then((result)=>{
     if (result.isConfirmed) {
-        fetch(`http://localhost:3000/books/${book._id}`, {
+        fetch(`https://book-berry-server.vercel.app/books/${book._id}`, {
           method: "PATCH",
           headers:{
             "Content-type":"application/json",

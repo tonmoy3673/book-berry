@@ -24,12 +24,12 @@ export const router=createBrowserRouter([
             {
                 path:'/',
                 element:<Home/>,
-                loader:()=>fetch('http://localhost:3000/books')
+                loader:()=>fetch('https://book-berry-server.vercel.app/books')
             },
             {
                 path:'/home',
                 element:<Home/>,
-                loader:()=>fetch('http://localhost:3000/books')
+                loader:()=>fetch('https://book-berry-server.vercel.app/books')
             },
             {
                 path:'/about',
@@ -42,7 +42,7 @@ export const router=createBrowserRouter([
             {
                 path:'/books/:id',
                 element:<BookDetails/>,
-                loader:({params})=>fetch(`http://localhost:3000/books/${params.id}`)
+                loader:({params})=>fetch(`https://book-berry-server.vercel.app/books/${params.id}`)
             },
             {
                 path:'/feedback',
@@ -75,7 +75,7 @@ export const router=createBrowserRouter([
             {
                 path:'/dashboard/update/:id',
                 element:<PrivateRoute><UpdateProducts/></PrivateRoute>,
-                loader:({params})=>fetch(`http://localhost:3000/books/${params.id}`)
+                loader:({params})=>fetch(`https://book-berry-server.vercel.app/books/${params.id}`)
             },
             {
                 path:'/dashboard/all-products',
