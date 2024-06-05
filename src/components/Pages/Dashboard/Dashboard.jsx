@@ -8,8 +8,10 @@ const Dashboard = () => {
   const { user,setLoading } = useContext(AuthContext);
   const [data, setData] = useState({});
   const [error, setError] = useState("");
-  const [name,setName]=useState("");
-  const [photoURL,setPhotoURL]=useState("");
+  const [name,setName]=useState(data.name);
+  const [photoURL,setPhotoURL]=useState(data.photoURL);
+
+  
 
   useEffect(() => {
     if (user?.email) {
@@ -38,6 +40,7 @@ const Dashboard = () => {
           const result = await response.json();
           
           setData(result);
+        
           
 
         } catch (err) {
@@ -68,7 +71,7 @@ const Dashboard = () => {
       if (result.isConfirmed) {
         setLoading(true);
           fetch(`http://localhost:3000/user/${user?.email}`, {
-            method: "PATCH",
+            method: "PUT",
             headers:{
               "Content-type":"application/json",
               authorization: `Bearer ${localStorage.getItem('access-token')}`
@@ -133,7 +136,7 @@ const Dashboard = () => {
                     placeholder="Type Food Name"
                     type="text"
                     id="name"
-                    value={name}
+                    value={data.name}
                     onChange={(e)=>setName(e.target.value)}
                     required
                   />
@@ -149,7 +152,7 @@ const Dashboard = () => {
                       placeholder="Input Photo URL"
                       type="text"
                       id="photoURL"
-                      value={photoURL}
+                      value={data.photoURL}
                         onChange={(e)=>setPhotoURL(e.target.value)}
                     required/>
                   </div>
