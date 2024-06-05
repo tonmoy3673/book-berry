@@ -5,9 +5,9 @@ import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 import { FaFacebook, FaGithub, FaGoogle } from 'react-icons/fa6';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { app } from '../../../firebase.config';
 import { setAuthToken } from '../../api/auth';
 import { AuthContext } from '../Context/AuthProvider';
+import app from '../../../firebase.config';
 
 
 const Login = () => {
