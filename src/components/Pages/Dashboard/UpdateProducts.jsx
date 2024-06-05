@@ -43,6 +43,7 @@ const UpdateProducts = () => {
           method: "PATCH",
           headers:{
             "Content-type":"application/json",
+            authorization: `Bearer ${localStorage.getItem('access-token')}`
         },
         body:JSON.stringify(data),
         })

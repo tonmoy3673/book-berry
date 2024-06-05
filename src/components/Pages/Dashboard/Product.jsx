@@ -21,6 +21,9 @@ const Product = ({product, setProducts,products} ) => {
         if (result.isConfirmed) {
           fetch(`http://localhost:3000/books/${_id}`, {
             method: "DELETE",
+            headers:{
+              authorization: `Bearer ${localStorage.getItem('access-token')}`
+            }
           })
             .then((res) => {
               return res.json();

@@ -47,7 +47,9 @@ const Books = ({ data }) => {
             <div className=" h-[240px] md:h-[264px] mx-auto !rounded-md">
                   
               
-                <img src={image_url} alt="books" className="!w-full  !rounded-md !h-[240px] !md:h-[364px] object-contain" />
+                <div className="overflow-hidden">
+                <img src={image_url} alt="books" className="!w-full  !rounded-md transform duration-300 transition-transform hover:scale-125 !h-[240px] !md:h-[364px] object-contain" />
+                </div>
                
               
               <div className="">

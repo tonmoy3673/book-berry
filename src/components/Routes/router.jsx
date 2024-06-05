@@ -66,7 +66,7 @@ export const router=createBrowserRouter([
             {
                 path:'/dashboard/user',
                 element:<PrivateRoute><Dashboard/></PrivateRoute>,
-                loader:()=>fetch('http://localhost:3000/user')
+                
             },
             {
                 path:'/dashboard/add-products',

@@ -1,3 +1,4 @@
+
 export const setAuthToken = (user) =>{
     const currentUser = {
         email: user.email
@@ -18,7 +19,9 @@ export const setAuthToken = (user) =>{
 }
 
 
-export const setAuthTokenForSingUp = (user) =>{
+
+export const setAuthTokenForSingUp = (user,toast,navigate,from) =>{
+   
     console.log(user);
     fetch(`http://localhost:3000/user/${user.email}`, {
         method: "PUT",
@@ -30,6 +33,8 @@ export const setAuthTokenForSingUp = (user) =>{
     .then(res => res.json())
     .then(data => {
         localStorage.setItem('access-token', data.token);
+        toast.success('Account Created Successfully!!')
+            navigate(from,{replace:true});
     })
 }
 

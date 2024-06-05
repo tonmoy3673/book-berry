@@ -8,16 +8,17 @@ import { AuthContext } from '../Context/AuthProvider';
 
 const SignUp = () => {
     const {register,handleSubmit,formState: { errors }}=useForm();
-    const {createUser,updateUser} =useContext(AuthContext);
+    const {createUser,updateUser,setLoading} =useContext(AuthContext);
     const [signUpError,setSignUpError]=useState('')
-    const navigate=useNavigate();
+    const navigate=useNavigate()
     const from=location.state?.from?.pathname || '/';
 
     const handleSignup=data=>{
+        
         setSignUpError('');
         createUser(data.email, data.password)
         .then(result =>{
-            
+            setLoading(true)
             const user=result.user;
             console.log(user);
             
@@ -46,11 +47,9 @@ const SignUp = () => {
 
     const saveUser=(name,email,photoURL)=>{
         const user={name,email,photoURL};
-        setAuthTokenForSingUp(user)
-            .then(res => res.json())
-        toast.success('Account Created Successfully!!')
-            navigate(from,{replace:true});
-
+        setAuthTokenForSingUp(user, toast, navigate,from)
+        setLoading(false)
+        
         }
 
 

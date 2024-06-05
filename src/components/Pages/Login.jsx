@@ -3,7 +3,7 @@ import { GithubAuthProvider, GoogleAuthProvider, getAuth, sendPasswordResetEmail
 import { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
-import { FaGithub, FaGoogle } from 'react-icons/fa6';
+import { FaFacebook, FaGithub, FaGoogle } from 'react-icons/fa6';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { app } from '../../../firebase.config';
 import { setAuthToken } from '../../api/auth';
@@ -128,7 +128,7 @@ const Login = () => {
                         {errors.password && <p role="alert" className='text-red-400'>{errors.password?.message}</p>}
                         <label className="label">
                         
-                            <a onClick={handleResetPassword} className="label-text text-white text-sm md:text-lg underline">Forget Password?</a>
+                            <a onClick={handleResetPassword} className="label-text text-white text-sm md:text-lg underline cursor-pointer">Forget Password?</a>
                             
                         </label>
                     </div>
@@ -143,6 +143,7 @@ const Login = () => {
                 <div className="divider text-xl font-semibold">OR</div>
                 <button onClick={handleSignInWithGoogle} className='btn w-full hover:bg-warning bg-[#00897B] text-white'><FaGoogle className='text-base'/> Login With Google</button>
                 <button  onClick={handleGitHub} className='btn w-full hover:bg-warning bg-[#00897B] text-white mt-2 md:mt-4'><FaGithub className='text-lg'/> Login With GitHub</button>
+                <button  onClick={handleGitHub} className='btn w-full hover:bg-warning bg-[#00897B] text-white mt-2 md:mt-4'><FaFacebook className='text-lg'/> Login With Facebook</button>
             </div>
 
         </div>

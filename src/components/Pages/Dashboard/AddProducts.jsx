@@ -27,7 +27,9 @@ const AddProducts = () => {
       fetch("http://localhost:3000/books", {
         method:"POST",
         headers:{
-          "Content-type":"application/json"
+          "Content-type":"application/json",
+          authorization: `Bearer ${localStorage.getItem('access-token')}`
+
         },
         body:JSON.stringify(data)
       })
