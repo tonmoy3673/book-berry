@@ -40,6 +40,20 @@
 // }
 
 
+// export const setAuthToken = (email) =>{
+   
+//     fetch(`https://book-berry-server.vercel.app/user/${email}`, {
+//         method: "PUT",
+//         headers: {
+//             'content-type' : ['application/json']
+//         },
+//         body: JSON.stringify({email})
+//     })
+//     .then(res => res.json())
+//     .then(data => {
+//         localStorage.setItem('access-token', data.token);
+//     })
+// }
 export const setAuthToken = (user) =>{
     const currentUser = {
         email: user.email
@@ -58,7 +72,6 @@ export const setAuthToken = (user) =>{
         localStorage.setItem('access-token', data.token);
     })
 }
-
 
 
 export const setAuthTokenForSingUp = (user,toast,navigate,from) =>{

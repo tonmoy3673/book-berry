@@ -58,7 +58,7 @@ const SignUp = () => {
     return (
         <div className='py-6 lg:py-10 mb-4 lg:mb-16 md:flex gap-20  items-center'>
             <div>
-                <img src='/src/assets/images/signUp.jpg' className='w-[300px] lg:w-[600px] mx-auto md:mx-0'>
+                <img src='https://i.ibb.co/9q8ShdJ/signUp.jpg' className='w-[300px] lg:w-[600px] mx-auto md:mx-0'>
                 </img>
             </div>
             <div className='w-96 p-10 bg-[#00897B] rounded mx-auto md:mx-0'>

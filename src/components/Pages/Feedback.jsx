@@ -5,7 +5,7 @@ const Feedback = () => {
     return (
         <div className="py-6 lg:py-10 mb-5 md:mb-12 md:flex gap-20  items-center" >
            <div>
-                <img src='/src/assets/images/feedback.jpg' className='w-[300px] lg:w-[500px] mx-auto md:mx-0'>
+                <img src='https://i.ibb.co/prn60yq/feedback.jpg' className='w-[300px] lg:w-[500px] mx-auto md:mx-0'>
                 </img>
             </div>
            <div>       

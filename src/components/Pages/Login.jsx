@@ -24,6 +24,7 @@ const Login = () => {
             setLoginError('');
         signIn(data.email, data.password)
         .then(result=>{
+            console.log(result);
             setAuthToken(data.email)
             const user=result.user;
             console.log(user);
@@ -98,7 +99,7 @@ const Login = () => {
     return (
         <div className='py-6 lg:py-16 mb-5 md:flex gap-20  items-center '>
             <div>
-                <img src='/src/assets/images/login.jpg' className='w-[300px] lg:w-[600px] mx-auto md:mx-0'>
+                <img src='https://i.ibb.co/8dqDsyN/login.jpg' className='w-[300px] lg:w-[600px] mx-auto md:mx-0'>
                 </img>
             </div>
 

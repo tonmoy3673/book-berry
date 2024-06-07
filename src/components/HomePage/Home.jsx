@@ -9,7 +9,7 @@ import Gallery from "./Gallery";
 
 
 const Home = () => {
-    const data=useLoaderData();
+    const data=useLoaderData([]);
     return (
         <div>
            <section>

@@ -40,7 +40,7 @@ const Books = ({ data }) => {
         speed={3000}
         allowTouchMove={false}
       >
-        {data?.map(({ image_url, _id }) => (
+        {Array.isArray(data) && data?.map(({ image_url, _id }) => (
           <SwiperSlide
             key={_id}
             className={`text-center py-8 md:py-12 mb-2`}

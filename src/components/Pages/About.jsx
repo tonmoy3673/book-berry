@@ -4,7 +4,7 @@ const About = () => {
     return (
       <div className="lg:flex py-8 lg:py-16 mt-8 lg:gap-16 ">
         
-        <img src="/src/assets/images/about.jpg" className="w-[500px] mx-auto lg:mx-0 mb-6 lg:mb-0 order-2 lg:order-1 rounded-md"/>
+        <img src="https://i.ibb.co/jbK8ryn/about.jpg" className="w-[500px] mx-auto lg:mx-0 mb-6 lg:mb-0 order-2 lg:order-1 rounded-md"/>
         
         <div className="order-1 lg:order-2">
           <h2 className="text-lg lg:text-3xl 2xl:text-[36px] font-semibold text-[#00897B] text-center lg:text-start">About US</h2>

@@ -98,7 +98,7 @@ const Services = () => {
                     className="flex gap-x-3 items-center mb-6 leading-none  "
                   >
                     <img
-                      src='/src/assets/icons/x.png'
+                      src='https://i.ibb.co/9qtbY4D/x.png'
                       className="lg:h-[14px] lg:w-[14px] h-[9px] w-[9px] "
                     />
                     <p className="text-base">{usual.title}</p>
@@ -118,7 +118,7 @@ const Services = () => {
                     className="flex gap-x-3 items-center mb-6 leading-none "
                   >
                     <img
-                      src='/src/assets/icons/r.png'
+                      src='https://i.ibb.co/6wT2x4W/r.png'
                       className="lg:h-[14px] lg:w-[14px] h-[9px] w-[9px] "
                     />
                     <p className="text-base">{usual.title}</p>

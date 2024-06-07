@@ -6,10 +6,10 @@ import { AuthContext } from "../../Context/AuthProvider";
 
 const Dashboard = () => {
   const { user,setLoading } = useContext(AuthContext);
-  const [data, setData] = useState({});
+  const [data, setData] = useState({name:'',photoURL:''});
   const [error, setError] = useState("");
-  const [name,setName]=useState(data.name);
-  const [photoURL,setPhotoURL]=useState(data.photoURL);
+  // const [name,setName]=useState(data.name);
+  // const [photoURL,setPhotoURL]=useState(data.photoURL);
 
   
 
@@ -82,8 +82,9 @@ const Dashboard = () => {
               return res.json();
             })
             .then((data) => {
-              setName(data.name)
-          setPhotoURL(data.photoURL)
+              setData(data)
+          //     setName(data.name)
+          // setPhotoURL(data.photoURL)
               console.log(data);
               
               Swal.fire("Saved!", "", "success");
@@ -137,7 +138,7 @@ const Dashboard = () => {
                     type="text"
                     id="name"
                     value={data.name}
-                    onChange={(e)=>setName(e.target.value)}
+                    onChange={(e)=>setData({...data,name:e.target.value})}
                     required
                   />
                 </div>
@@ -153,7 +154,7 @@ const Dashboard = () => {
                       type="text"
                       id="photoURL"
                       value={data.photoURL}
-                        onChange={(e)=>setPhotoURL(e.target.value)}
+                        onChange={(e)=>setData({...data,photoURL:e.target.value})}
                     required/>
                   </div>
               </div>

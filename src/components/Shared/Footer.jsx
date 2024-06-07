@@ -10,7 +10,7 @@ const Footer = () => {
         {/* company logo */}
         <div className=" absolute lg:-top-20 -top-10 left-1/2 lg:-ml-[90px] -ml-[50px] lg:w-auto lg:h-auto w-[100px] h-[100px]  ">
           <img
-            src="/src/assets/images/logoF.png"
+            src="https://i.ibb.co/7r0pXv7/logoF.png"
             height={140}
             width={140}
             className="rounded-full"
