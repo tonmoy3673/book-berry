@@ -1,16 +1,17 @@
 
 import { useContext, useState } from "react";
 import { FaRegUser } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Context/AuthProvider";
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   const handleLogout = () => {
     logOut()
-      .then(() => {})
+      .then(() =>  navigate('/login'))
       .catch((error) => console.error(error));
   };
 

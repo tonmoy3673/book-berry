@@ -4,8 +4,13 @@ import { Navigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../Context/AuthProvider";
 
 const PrivateRoute = ({ children }) => {
-  const { user, loading } = useContext(AuthContext);
+  const { user, loading, logOut } = useContext(AuthContext);
   const location = useLocation();
+
+  const token = localStorage.getItem("access-token");
+
+
+
   if (loading) {
     return (
       <div className="d-flex mx-auto py-3 text-center">
@@ -14,6 +19,13 @@ const PrivateRoute = ({ children }) => {
       </div>
     );
   }
+
+  if(!token){
+    logOut()
+    .then(() =>  <Navigate to='/login' state={{ from: location }} replace />)
+    .catch((error) => console.error(error));
+  }
+
   if (user) {
     return children;
   }
