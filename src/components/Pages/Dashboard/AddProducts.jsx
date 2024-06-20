@@ -24,7 +24,7 @@ const AddProducts = () => {
   denyButtonText: `Don't save`
 }).then((result)=>{
   if (result.isConfirmed) {
-      fetch("https://book-berry-server.vercel.app/books", {
+      fetch("https://book-berry-server.onrender.com/books", {
         method:"POST",
         headers:{
           "Content-type":"application/json",

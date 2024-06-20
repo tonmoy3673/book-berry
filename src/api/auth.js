@@ -5,7 +5,7 @@
 //     }
 
 //     console.log(user);
-//     fetch(`https://book-berry-server.vercel.app/user/login`, {
+//     fetch(`https://book-berry-server.onrender.com/user/login`, {
 //         method: "POST",
 //         headers: {
 //             'content-type' : ['application/json']
@@ -24,7 +24,7 @@
 // export const setAuthTokenForSingUp = (user,toast,navigate,from) =>{
    
 //     console.log(user);
-//     fetch(`https://book-berry-server.vercel.app/user/register`, {
+//     fetch(`https://book-berry-server.onrender.com/user/register`, {
 //         method: "POST",
 //         headers: {
 //             'content-type' : ['application/json']
@@ -42,7 +42,7 @@
 
 // export const setAuthToken = (email) =>{
    
-//     fetch(`https://book-berry-server.vercel.app/user/${email}`, {
+//     fetch(`https://book-berry-server.onrender.com/user/${email}`, {
 //         method: "PUT",
 //         headers: {
 //             'content-type' : ['application/json']
@@ -60,7 +60,7 @@ export const setAuthToken = (user) =>{
     }
 
     console.log(user);
-    fetch(`https://book-berry-server.vercel.app/user/${user.email}`, {
+    fetch(`https://book-berry-server.onrender.com/user/${user.email}`, {
         method: "PUT",
         headers: {
             'content-type' : ['application/json']
@@ -77,7 +77,7 @@ export const setAuthToken = (user) =>{
 export const setAuthTokenForSingUp = (user,toast,navigate,from) =>{
    
     console.log(user);
-    fetch(`https://book-berry-server.vercel.app/user/${user.email}`, {
+    fetch(`https://book-berry-server.onrender.com/user/${user.email}`, {
         method: "PUT",
         headers: {
             'content-type' : ['application/json']

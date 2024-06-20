@@ -25,7 +25,7 @@ const Dashboard = () => {
       const fetchData = async () => {
         try {
           const response = await fetch(
-            `https://book-berry-server.vercel.app/user/${user?.email}`,
+            `https://book-berry-server.onrender.com/user/${user?.email}`,
             {
               headers: {
                 authorization: `Bearer ${token}`,
@@ -70,7 +70,7 @@ const Dashboard = () => {
 
       if (result.isConfirmed) {
         setLoading(true);
-          fetch(`https://book-berry-server.vercel.app/user/${user?.email}`, {
+          fetch(`https://book-berry-server.onrender.com/user/${user?.email}`, {
             method: "PUT",
             headers:{
               "Content-type":"application/json",

@@ -7,7 +7,7 @@ const AllProducts = () => {
     const [loading, setLoading] = useState(false)
     useEffect(()=>{
         setLoading(true)
-        fetch("https://book-berry-server.vercel.app/books")
+        fetch("https://book-berry-server.onrender.com/books")
         .then((res)=>res.json())
         .then((data)=>setProducts(data))
         .catch((error)=>{

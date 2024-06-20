@@ -19,11 +19,9 @@ const Product = ({product, setProducts,products} ) => {
         },
       }).then((result) => {
         if (result.isConfirmed) {
-          fetch(`https://book-berry-server.vercel.app/books/${_id}`, {
+          fetch(`https://book-berry-server.onrender.com/books/${_id}`, {
             method: "DELETE",
-            headers:{
-              authorization: `Bearer ${localStorage.getItem('access-token')}`
-            }
+           
           })
             .then((res) => {
               return res.json();
