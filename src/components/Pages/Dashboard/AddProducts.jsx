@@ -70,7 +70,7 @@ const AddProducts = () => {
                         title
                       </label>
                       <input
-                        className="w-full rounded-lg bg-[#C477B126] shadow-sm shadow-black p-3 lg:pr-16 pr-3 text-sm" // Added pr-12 class for padding-right
+                        className="w-full rounded-lg bg-[#C477B126] text-black shadow-sm shadow-black p-3 lg:pr-16 pr-3 text-sm" // Added pr-12 class for padding-right
                         placeholder="Type Food Name"
                         type="text"
                         id="title"
@@ -83,7 +83,7 @@ const AddProducts = () => {
                         Price
                       </label>
                       <input
-                        className="w-full rounded-lg bg-[#C477B126]  shadow-sm shadow-black p-3 lg:pr-16 pr-3  text-sm"
+                        className="w-full rounded-lg bg-[#C477B126] text-black  shadow-sm shadow-black p-3 lg:pr-16 pr-3  text-sm"
                         placeholder="Type Price $"
                         type="number"
                         id="price"
@@ -99,7 +99,7 @@ const AddProducts = () => {
                       author
                       </label>
                       <input
-                        className="w-full rounded-lg bg-[#C477B126] shadow-sm shadow-black p-3 lg:pr-16 pr-3 text-sm" // Added pr-12 class for padding-right
+                        className="w-full rounded-lg bg-[#C477B126] text-black shadow-sm shadow-black p-3 lg:pr-16 pr-3 text-sm" // Added pr-12 class for padding-right
                         placeholder="Author Name"
                         type="text"
                         id="author"
@@ -112,7 +112,7 @@ const AddProducts = () => {
                       pages
                       </label>
                       <input
-                        className="w-full rounded-lg bg-[#C477B126]  shadow-sm shadow-black p-3 lg:pr-16 pr-3  text-sm"
+                        className="w-full rounded-lg bg-[#C477B126] text-black  shadow-sm shadow-black p-3 lg:pr-16 pr-3  text-sm"
                         placeholder="Input Page Count"
                         type="number"
                         id="pages"
@@ -127,7 +127,7 @@ const AddProducts = () => {
                       Subjects
                     </label>
                     <input
-                      className="w-full rounded-lg bg-[#C477B126] shadow-sm shadow-black p-3 lg:pr-16 pr-3  text-sm"
+                      className="w-full rounded-lg bg-[#C477B126] text-black shadow-sm shadow-black p-3 lg:pr-16 pr-3  text-sm"
                       placeholder="Type Subjects Name "
                       type="text"
                       id="subject"
@@ -140,7 +140,7 @@ const AddProducts = () => {
                       Photo
                     </label>
                     <input
-                      className="w-full rounded-lg bg-[#C477B126] shadow-sm shadow-black p-3 lg:pr-16 pr-3  text-sm"
+                      className="w-full rounded-lg bg-[#C477B126] text-black shadow-sm shadow-black p-3 lg:pr-16 pr-3  text-sm"
                       placeholder="Input Photo URL"
                       type="text"
                       id="photo"
@@ -154,7 +154,7 @@ const AddProducts = () => {
                   </label>
                   <h5 className="mb-2 text-[#00897B] text-base">Description *</h5>
                   <textarea
-                    className="w-full rounded-lg bg-[#C477B126] shadow-sm shadow-black p-4 lg:pr-16 pr-3  text-sm"
+                    className="w-full rounded-lg bg-[#C477B126] text-black shadow-sm shadow-black p-4 lg:pr-16 pr-3  text-sm"
                     placeholder="Write Description..."
                     rows="6"
                     type="text"
@@ -168,7 +168,7 @@ const AddProducts = () => {
                     language
                     </label>
                     <input
-                      className="w-full rounded-lg bg-[#C477B126] shadow-sm shadow-black p-3 lg:pr-16 pr-3  text-sm"
+                      className="w-full rounded-lg bg-[#C477B126] text-black shadow-sm shadow-black p-3 lg:pr-16 pr-3  text-sm"
                       placeholder="Type Language"
                       type="text"
                       id="language"
