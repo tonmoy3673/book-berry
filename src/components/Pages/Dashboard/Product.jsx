@@ -21,7 +21,11 @@ const Product = ({product, setProducts,products} ) => {
         if (result.isConfirmed) {
           fetch(`https://book-berry-server.onrender.com/books/${_id}`, {
             method: "DELETE",
-           
+            headers:{
+              "Content-type":"application/json",
+              authorization: `Bearer ${localStorage.getItem('access-token')}`
+    
+            },
           })
             .then((res) => {
               return res.json();
