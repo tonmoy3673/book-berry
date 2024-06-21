@@ -1,7 +1,34 @@
 
 
+import toast from "react-hot-toast";
 import { FaLocationArrow } from "react-icons/fa6";
 const Feedback = () => {
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    const form=event.target;
+    const formData = new FormData(form);
+
+    formData.append("access_key", "0feabc17-69c3-4689-adc2-4326df278ffa");
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: json
+    }).then((res) => res.json());
+
+    if (res.success) {
+        form.reset()
+        toast.success('Email has been sent successfully!!')
+        
+    }
+  };
+
     return (
         <div className="py-6 lg:py-10 mb-5 md:mb-12 md:flex gap-20  items-center" >
            <div>
@@ -14,7 +41,7 @@ const Feedback = () => {
                 {" "}
                 Give Us Feedback{" "}
               </h2>
-              <form action="#" className=" ">
+              <form onSubmit={onSubmit} className=" ">
                 <div className="text-base">
                   <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:mb-8 mb-4">
                     <div>
@@ -27,8 +54,8 @@ const Feedback = () => {
                         className="w-full rounded-lg bg-[#C477B126] shadow-sm shadow-black p-3 lg:pr-16 pr-3 text-sm" // Added pr-12 class for padding-right
                         placeholder="Robot Fox"
                         type="text"
-                        id="name"
-                      />
+                        name="name"
+                      required/>
                     </div>
 
                     <div>
@@ -40,8 +67,8 @@ const Feedback = () => {
                         className="w-full rounded-lg bg-[#C477B126]  shadow-sm shadow-black p-3 lg:pr-16 pr-3  text-sm"
                         placeholder="info.example@gmail.com"
                         type="email"
-                        id="email"
-                      />
+                        name="email"
+                      required/>
                     </div>
                   </div>
                 </div>
@@ -56,7 +83,8 @@ const Feedback = () => {
                       className="w-full rounded-lg bg-[#C477B126] shadow-sm shadow-black p-3 lg:pr-16 pr-3  text-sm"
                       placeholder="Subjects "
                       type="text"
-                      id="text"
+                      name="subject"
+                      required
                     />
                   </div>
 
@@ -69,7 +97,8 @@ const Feedback = () => {
                       className="w-full rounded-lg bg-[#C477B126] shadow-sm shadow-black p-3 lg:pr-16 pr-3  text-sm"
                       placeholder="+8801700000000"
                       type="tel"
-                      id="phone"
+                      name="phone"
+                      required
                     />
                   </div>
                 </div>
@@ -83,8 +112,8 @@ const Feedback = () => {
                     className="w-full rounded-lg bg-[#C477B126] shadow-sm shadow-black p-4 lg:pr-16 pr-3  text-sm"
                     placeholder="Write Message"
                     rows="6"
-                    id="message"
-                  ></textarea>
+                    name="message"
+                 required ></textarea>
                 </div>
 
                 <div className=" flex md:block xs:justify-center xs:items-center xs:mx-auto">
