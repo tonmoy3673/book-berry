@@ -1,15 +1,14 @@
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import HomeIcon from "@mui/icons-material/Home";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
-import { BiUserCheck } from "react-icons/bi";
 import { Link } from "react-router-dom";
-
 const Sidebar = ({ display, minimize }) => {
   return (
     <aside
       className={`sidebar transform ${
         display ? "translate-x-0" : "-translate-x-full"
-      } transition-all duration-[400ms] bg-slate-800 text-black ${
+      } transition-all duration-[400ms] bg-[#00897B] text-black ${
         minimize ? "w-[90px]" : "w-64"
       } lg:translate-x-0 lg:static absolute top-[60px] left-0 min-h-screen-minus-60px z-50`}
     >
@@ -76,7 +75,7 @@ const Sidebar = ({ display, minimize }) => {
 
           <Link to="/dashboard/user">
             <li className="flex items-center group  w-full rounded cursor-pointer transition-all duration-[400ms] relative overflow-hidden py-2 px-4 bg-white hover:bg-white">
-              <BiUserCheck />
+              <AccountCircleIcon />
               <div
                 className={`${
                   minimize ? "opacity-0 w-full" : "opacity-100 w-full"

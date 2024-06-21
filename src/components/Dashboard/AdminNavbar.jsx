@@ -6,7 +6,7 @@ import WbSunnyIcon from "@mui/icons-material/WbSunny";
 
 const AdminNavbar = ({ handleMenu, display, handleMinimize, minimize }) => {
   return (
-    <nav className="bg-gray-800 p-4 text-white flex justify-between items-center h-16">
+    <nav className="bg-[#00897B] p-4 text-white flex justify-between items-center h-16">
       <div
         className={`font-semibold flex ${minimize ? "gap-0" : "gap-4"} items-center transition duration-[400ms] ease-linear`}
       >
@@ -19,7 +19,7 @@ const AdminNavbar = ({ handleMenu, display, handleMinimize, minimize }) => {
         </div>
 
         <span
-          className={`cursor-pointer hidden lg:block bg-slate-600 rounded-lg ${minimize ? "px-4 rotate-180":""} p-2 transform transition-transform duration-[400ms] ease-linear`}
+          className={`cursor-pointer hidden lg:block bg-[#00897B] rounded-lg ${minimize ? "px-4 rotate-180":""} p-2 transform transition-transform duration-[400ms] ease-linear`}
           onClick={handleMinimize}
         >
           <img src="https://multivendorbd.vercel.app/images/icons/menu-fold-line.svg" className="w-6 h-6" />

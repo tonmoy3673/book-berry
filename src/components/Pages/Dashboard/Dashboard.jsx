@@ -125,7 +125,7 @@ const Dashboard = () => {
 
             {/* ================ form part ============== */}
             <div>
-              <h3 className="text-2xl text-center mb-2 md:mb-3">
+              <h3 className="text-lg md:text-2xl text-center mb-2 md:mb-3 text-[#00897B]">
                 Edit User Info
               </h3>
               <div>
@@ -136,7 +136,7 @@ const Dashboard = () => {
                     name
                   </label>
                   <input
-                    className="w-full rounded-lg bg-[#C477B126] shadow-sm shadow-black p-3 lg:pr-16 pr-3 text-sm" // Added pr-12 class for padding-right
+                    className="w-full rounded-lg bg-[#C477B126] shadow-sm shadow-black text-black p-3 lg:pr-16 pr-3 text-sm" // Added pr-12 class for padding-right
                     placeholder="Type Food Name"
                     type="text"
                     id="name"
@@ -154,7 +154,7 @@ const Dashboard = () => {
                     photoURL
                   </label>
                   <input
-                    className="w-full rounded-lg bg-[#C477B126] shadow-sm shadow-black p-3 lg:pr-16 pr-3  text-sm"
+                    className="w-full rounded-lg bg-[#C477B126] shadow-sm shadow-black text-black p-3 lg:pr-16 pr-3  text-sm"
                     placeholder="Input Photo URL"
                     type="text"
                     id="photoURL"

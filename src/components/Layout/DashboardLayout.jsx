@@ -40,7 +40,7 @@ const DashboardLayout=()=> {
         display={display}
         minimize={minimize}
         />
-        <main className="flex-1 sm:rounded-tl-lg lg:rounded-tl-lg dash-bg bg-slate-700 text-white p-5">
+        <main className="flex-1 sm:rounded-tl-lg lg:rounded-tl-lg dash-bg bg-base-200 text-white p-5">
           <Outlet/>
         </main>
       </div>
