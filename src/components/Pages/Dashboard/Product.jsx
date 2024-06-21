@@ -45,12 +45,12 @@ const Product = ({product, setProducts,products} ) => {
     };
     return (
         <div>
-            <div className=" h-[220px] lg:h-[350px] w-48 lg:w-72 mt-2 lg:mt-0">
+            <div className=" h-[220px] !lg:h-[350px] w-48 lg:w-72 mt-2 lg:mt-0">
               <div>
               <img
                   src={image_url}
                   alt="food"
-                  className="!w-full  !rounded-md !h-[240px] !md:h-[364px] object-contain mx-auto"
+                  className="!w-2/3  !rounded-md h-[130px] !md:h-[350px]  mx-auto"
                 />
               </div>
               <div className="text-center">

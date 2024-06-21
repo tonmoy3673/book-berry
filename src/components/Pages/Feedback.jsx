@@ -24,7 +24,7 @@ const Feedback = () => {
 
     if (res.success) {
         form.reset()
-        toast.success('Email has been sent successfully!!')
+        toast.success('Message has been sent successfully!!')
         
     }
   };
